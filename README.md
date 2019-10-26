@@ -9,9 +9,9 @@ npx electron .
 
 打包
 ```
-npm install electron-packager
-npx electron-packager . fuck-xuexiqiangguo \
-    --executable-name="Fuck学习强国" \
-    --electron-version="3.0.15" --overwrite --asar --icon="logo.png" \
+npm install electron-packager -g
+npx electron-packager . 崇拜者 \
+    --executable-name="崇拜者" \
+    --electron-version="3.0.15" --overwrite --asar --icon="logo.jpeg" \
     --ignore="node_modules" --ignore="package-lock.json"
 ```

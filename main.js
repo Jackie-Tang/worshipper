@@ -36,7 +36,7 @@
           width: 1e3,
           height: 600,
           show: !1,
-          icon: e.join(__dirname, "logo.png"),
+          icon: e.join(__dirname, "logo.jpeg"),
           webPreferences: {
             nodeIntegration: !1,
             webSecurity: !u,
@@ -61,6 +61,7 @@
         const e = { proxyRules: m };
         i.webContents.session.setProxy(e, () => {});
       }
+
       i.loadURL("https://www.xuexi.cn/"),
         i.once("ready-to-show", () => {
           i.show();

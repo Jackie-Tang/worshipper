@@ -23,7 +23,7 @@ module.exports = (function() {
         new MutationObserver(() => {
           "block" == t.style.display && top.location.reload();
         }).observe(t, { attributes: !0 });
-      })(o);
+      })(o)
       const r = new URL(o.GOTO).searchParams,
         c = r.get("appid"),
         i = r.get("redirect_uri"),
@@ -39,6 +39,21 @@ module.exports = (function() {
       );
     },
     s = /^(?:(\+\d+)-)?(\d+)$/;
+
+  
+  const beautify = () => {
+    const header = document.createElement('div');
+    // header.innerHTML = '亲爱的希希'
+    header.style.color = '#FF0000';
+    header.style.textAlign = 'center';
+
+    const app = document.body.querySelector('#app');
+    app.prepend(header);
+
+    // document.querySelector("#ddlogin-iframe").contentWindow.document.querySelector('.login_content').style.background = 'transparent';
+  }
+
+
   return {
     onLogin: () => {
       document.querySelectorAll(".header, .redflagbox, .footer").forEach(e => {
@@ -50,9 +65,20 @@ module.exports = (function() {
         // (t.style.color = "#2db7f5"),
         // (t.text = "使用用户名和密码登录123"),
         document.querySelector(".ddlogintext").append(c("br"), c("br"), t),
+        document.querySelector(".ddlogintext").prepend('希希同学，'),
+        document.querySelector(".ddlogintext").style.color = '#fff',
         [document.documentElement, document.body].forEach(e => {
           e.style.minWidth = "unset";
+          e.style.display = 'flex';
+          e.style.justifyContent = 'center';
+          e.style.alignItems = 'center';
+          e.style.background="#333333"
+          // e.style.background='url("http://hbfile.huabanimg.com/img/home/banner/031537c507ec8cbb6c9e912a8694117baabcc39ca28db")';
+          e.style.backgroundRepeat="no-repeat";
+          e.style.backgroundSize="cover";
         });
+        beautify();
+        
     },
     isLoggedIn: () => document.cookie.includes("token="),
     onAutoLogin: e => {

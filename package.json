@@ -1,1 +1,10 @@
-{"name":"fuck-xuexiqiangguo","private":true,"electron":"3.0.15","main":"main.js","version":"0.8.0"}
+{
+  "name": "worshipper",
+  "private": true,
+  "electron": "3.0.15",
+  "main": "main.js",
+  "version": "0.8.0",
+  "devDependencies": {
+    "jquery": "^3.4.1"
+  }
+}
